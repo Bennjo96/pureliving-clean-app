@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Cleaning Service</title>
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <script src="/JS/booking.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Choose Your Cleaning Package</h1>
+      <div class="packages">
+        <div class="package" data-frequency="one-time">
+          <h2>One-Time Cleaning</h2>
+          <p>Perfect for special occasions or emergency cleanups.</p>
+        </div>
+        <div class="package" data-frequency="weekly">
+          <h2>Weekly Cleaning</h2>
+          <p>Keep your space consistently clean with weekly visits.</p>
+        </div>
+        <div class="package" data-frequency="bi-weekly">
+          <h2>Bi-Weekly Cleaning</h2>
+          <p>Ideal for routine maintenance without the weekly commitment.</p>
+        </div>
+      </div>
+
+      <div class="date-selection">
+        <h2>Select Date:</h2>
+        <input type="date" id="cleaning-date" />
+      </div>
+
+      <div class="duration-selection">
+        <h2>Select Duration:</h2>
+        <span id="duration-display">3 hours</span>
+        <input type="range" id="duration" min="1" max="8" step="1" value="3" />
+      </div>
+
+      <button class="book-button">Book Now</button>
+    </div>
+  </body>
+</html>

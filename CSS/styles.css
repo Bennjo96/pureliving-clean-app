@@ -48,8 +48,8 @@
   text-transform: uppercase;
 }
 
-.navbar ul li ::after{
-  content: '';
+.navbar ul li ::after {
+  content: "";
   height: 3px;
   width: 0;
   background: #009688;
@@ -57,10 +57,9 @@
   left: 0;
   bottom: -10px;
   transition: 0.5s;
-
 }
 
-.navbar ul li :hover:after{
+.navbar ul li :hover:after {
   width: 100%;
 }
 
@@ -73,19 +72,18 @@
   color: #fff;
 }
 
-.content h1{
+.content h1 {
   font-size: 70px;
   margin-top: 80px;
 }
 
-.content p{
+.content p {
   margin: 20px auto;
   font-weight: 100;
   line-height: 25px;
-
 }
 
-button{
+button {
   width: 200px;
   padding: 15px 0;
   text-align: center;
@@ -93,16 +91,16 @@ button{
   border-radius: 25px;
   font-weight: bold;
   border: 2px solid #009688;
-  background: transparent;
+  background: #009688;
   color: #fff;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-
+  transition: background-color 0.5s ease;
 }
-  
-span{
-  background: #009688;
+
+span {
+  background: #fff;
   height: 100%;
   width: 0%;
   border-radius: 25px;
@@ -110,13 +108,105 @@ span{
   left: 0;
   bottom: 0;
   z-index: -1;
-  transition: 0.5s;
+  transition: width 0.5s ease, background-color 0.5s ease;
 }
 
-button:hover span{
-  width: 100%;
+button:hover span {
+  width: 0%;
 }
 
-button:hover{
-  border:none;
+button:hover {
+  background: transparent;
+  color: #009688;
+  border: 2px solid #009688;
+}
+
+#plz-input {
+  width: 280px; /* Same width as the button for alignment */
+  padding: 15px;
+  border-radius: 35px;
+  border: 2px solid #009688;
+  background: transparent;
+  color: #fff;
+  margin-right: 10px; /* Space between input and button */
+  outline: none; /* Remove default focus outline */
+}
+
+#plz-input::placeholder {
+  color: #fff;
+  font-weight: 800; /* Darker color for placeholder text to ensure readability */
+}
+
+#search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.packages {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.package {
+  border: 1px solid #009688;
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: white; /* Ensure background is white for readability */
+  width: 30%; /* Makes the packages equally spaced and aligned */
+}
+
+.package:hover {
+  background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+input[type="date"],
+input[type="range"] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button.book-button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background-color: #009688;
+  color: white;
+  cursor: pointer;
+}
+
+button.book-button:hover {
+  background: transparent;
+  color: #009688;
+}
+
+.duration-selection {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#duration-display {
+  display: block; /* Ensures it appears above the slider */
+  margin-bottom: 10px; /* Adds some space between the display and the slider */
+}
+
+input[type="range"] {
+  width: 80%; /* Ensures the slider is appropriately sized */
+  margin: auto; /* Center aligns the slider */
 }
